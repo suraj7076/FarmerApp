@@ -99,7 +99,7 @@ public class QueryUsers {
                 users.add(users1);
             }
         }catch (JSONException e){
-            Log.e("QueryUsers", "Problem parsing the earthquake JSON results", e);
+            Log.e("QueryUsers", "Problem parsing the Users JSON results", e);
 
         }
         return users;
