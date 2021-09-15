@@ -16,6 +16,8 @@ import android.widget.TextView;
 
 import android.net.ConnectivityManager;
 import android.content.Context;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class UsersActivity extends AppCompatActivity
@@ -33,6 +35,8 @@ public class UsersActivity extends AppCompatActivity
         setContentView(R.layout.activity_users);
 
         ListView userListView = (ListView) findViewById(R.id.list);
+        mUsersAdapter = new UsersAdapter(this, new ArrayList<Users>());
+        userListView.setAdapter(mUsersAdapter);
         mEmptyStateTextView = (TextView) findViewById(R.id.empty_view);
         userListView.setEmptyView(mEmptyStateTextView);
 
